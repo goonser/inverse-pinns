@@ -1,7 +1,7 @@
 # JAXPI
 
 This repository is an adaptation of the [JAX-PI repository from Predictive Intelligence Lab](https://github.com/PredictiveIntelligenceLab/jaxpi) for a master's thesis at the Department of Electrical Engineering at Chalmers University of Technology. It offers a comprehensive implementation of physics-informed neural networks (PINNs), seamlessly integrating several advanced network architectures, and training algorithms from [An Expert's Guide to Training Physics-informed Neural Networks
-](https://arxiv.org/abs/2308.08468) and adapts these to the domain of discharge physics. 
+](https://arxiv.org/abs/2308.08468) and adapts these to the domain of inverse problems for discharge physics. 
 ## Demo 
 A demonstration notebook for running the code on Google Colab is available [here](https://colab.research.google.com/drive/1a33Zx5J9NJ3mn8uNzxFKQq_m0DLjST9Q?usp=sharing). The next sections will provide a more thorough description of using the repo. 
 
@@ -20,8 +20,8 @@ The code has been tested and confirmed to work with the following versions:
 Install JAX-PI with the following commands:
 
 ``` 
-git clone https://github.com/felixagren97/jaxpi.git
-cd jaxpi
+git clone https://github.com/goonser/inverse-pinns.git
+cd inverse-pinns/
 pip install .
 ```
 
@@ -35,7 +35,7 @@ To illustrate how to use our code, we will use the advection equation as an exam
 First, navigate to the advection directory within the `examples` folder:
 
 ``` 
-cd jaxpi/examples/laplace
+cd inverse-pinns/examples/poissons_equation_in_cartesian_geometry
 ``` 
 To train the model, run the following command:
 ```
@@ -94,3 +94,15 @@ The config files contain a larger number of training and problem-specific config
 | max_steps             | Number of iterations before stopping                                                                             |
 | batch_size_per_device | Batch size when training (a smaller value than the default 4096 recommended)                                     |
 | use_causal            | Use modified PDE residual loss to avoid violating causality. Should be None or False for non-time-dependent PDEs |
+
+## Citation
+**TODO ADD BibTex Citation**
+
+Citation for original JAXPI:
+
+    @article{wang2023expert,
+      title={An Expert's Guide to Training Physics-informed Neural Networks},
+      author={Wang, Sifan and Sankaran, Shyam and Wang, Hanwen and Perdikaris, Paris},
+      journal={arXiv preprint arXiv:2308.08468},
+      year={2023}
+    }
