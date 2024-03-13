@@ -31,7 +31,7 @@ We use [Weights & Biases](https://wandb.ai/site) to log and monitor training met
 Please ensure you have Weights & Biases installed and properly set up with your account before proceeding. 
 You can follow the installation guide provided [here](https://docs.wandb.ai/quickstart).
 
-To illustrate how to use our code, we will use the advection equation as an example. 
+To illustrate how to use our code, we will use the Poisson's equation in cartesian geometry as an example. 
 First, navigate to the advection directory within the `examples` folder:
 
 ``` 
@@ -59,7 +59,7 @@ python main.py --config.mode=eval
 ```
 
 ## Code structure
-The code corresponding to each problem is entered in a folder in the examples directory (e.g., examples/laplace/). Here is an overview of the contents of each such file:
+The code corresponding to each problem is entered in a folder in the examples directory (e.g., examples/poissons_equation_in_coaxial_geometry/). Here is an overview of the contents of each such file:
 | Name                                   | Function                                                                                                                      |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | configs                                | Folder containing all config files                                                                                            |
